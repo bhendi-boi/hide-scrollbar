@@ -59,7 +59,7 @@ function App() {
         <p className="text-gray-200">
           Want to know how to do this ? You can find step by step tutorial on my{" "}
           <a
-            href="https://https://github.com/bhendi-boi/hide-scrollbar"
+            href="https://dev.to/bhendi/mastering-the-art-of-hiding-scrollbars-with-css-1bck"
             target="_blank"
             className="text-blue-400 cursor-pointer"
           >
