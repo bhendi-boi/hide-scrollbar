@@ -35,7 +35,39 @@ const images: Image[] = [
 
 function App() {
   return (
-    <main className="min-h-screen px-5 py-16 sm:px-10 md:px-20 bg-fuchsia-500 font-inter">
+    <main className="min-h-screen px-5 py-16 bg-black sm:px-10 md:px-20 font-inter">
+      <section aria-labelledby="hide-scrollbar px-4">
+        <header>
+          <h1
+            id="hide-scrollbar"
+            className="mb-4 text-4xl font-bold text-white"
+          >
+            Hide Scrollbar
+          </h1>
+        </header>
+        <p className="text-gray-200">
+          You can grab the source code on{" "}
+          <a
+            href="https://https://github.com/bhendi-boi/hide-scrollbar"
+            target="_blank"
+            className="text-blue-400 cursor-pointer"
+          >
+            github
+          </a>
+          .
+        </p>
+        <p className="text-gray-200">
+          Want to know how to do this ? You can find step by step tutorial on my{" "}
+          <a
+            href="https://https://github.com/bhendi-boi/hide-scrollbar"
+            target="_blank"
+            className="text-blue-400 cursor-pointer"
+          >
+            blog post
+          </a>{" "}
+          .
+        </p>
+      </section>
       <section aria-labelledby="without-scrollbar" className="pt-16">
         <header>
           <h2
