@@ -71,7 +71,7 @@ function List({ isScrollBarVisible }: { isScrollBarVisible?: boolean }) {
     <ul
       className={classNames(
         "flex gap-4 px-4 py-8 overflow-x-auto sm:gap-8 sm:px-8 md:px-12 md:gap-12",
-        isScrollBarVisible && "h-56",
+        isScrollBarVisible && "h-[225px]",
         !isScrollBarVisible && "h-52"
       )}
     >
