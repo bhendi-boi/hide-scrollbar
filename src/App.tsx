@@ -78,7 +78,7 @@ function App() {
           </h2>
         </header>
         <div className="overflow-hidden h-52">
-          <List isScrollBarVisible />
+          <List hiddenScrollBar />
         </div>
       </section>
       <section aria-labelledby="with-scrollbar" className="pt-16">
@@ -98,13 +98,13 @@ function App() {
 
 export default App;
 
-function List({ isScrollBarVisible }: { isScrollBarVisible?: boolean }) {
+function List({ hiddenScrollBar }: { hiddenScrollBar?: boolean }) {
   return (
     <ul
       className={classNames(
         "flex gap-4 px-4 py-8 overflow-x-auto sm:gap-8 sm:px-8 md:px-12 md:gap-12",
-        isScrollBarVisible && "h-[225px]",
-        !isScrollBarVisible && "h-52"
+        hiddenScrollBar && "h-[225px]",
+        !hiddenScrollBar && "h-52"
       )}
     >
       {images.map((image) => {
