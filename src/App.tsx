@@ -44,11 +44,7 @@ function App() {
             With out Scrollbar
           </h2>
         </header>
-        <ul className="flex gap-4 px-4 py-8 overflow-x-auto h-52 sm:gap-8 sm:px-8 md:px-12 md:gap-12">
-          {images.map((image) => {
-            return <ImageCard {...image} />;
-          })}
-        </ul>
+        <List />
       </section>
       <section aria-labelledby="with-scrollbar" className="pt-16">
         <header>
@@ -58,15 +54,21 @@ function App() {
           >
             With Scrollbar
           </h2>
+          <List />
         </header>
-        <ul className="flex gap-4 px-4 py-8 overflow-x-auto h-52 sm:gap-8 sm:px-8 md:px-12 md:gap-12">
-          {images.map((image) => {
-            return <ImageCard {...image} />;
-          })}
-        </ul>
       </section>
     </main>
   );
 }
 
 export default App;
+
+function List() {
+  return (
+    <ul className="flex gap-4 px-4 py-8 overflow-x-auto h-52 sm:gap-8 sm:px-8 md:px-12 md:gap-12">
+      {images.map((image) => {
+        return <ImageCard {...image} />;
+      })}
+    </ul>
+  );
+}
