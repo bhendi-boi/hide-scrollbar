@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import ImageCard from "./components/ImageCard";
 import { Image } from "./types";
 
@@ -44,7 +45,9 @@ function App() {
             With out Scrollbar
           </h2>
         </header>
-        <List />
+        <div className="overflow-hidden h-52">
+          <List isScrollBarVisible />
+        </div>
       </section>
       <section aria-labelledby="with-scrollbar" className="pt-16">
         <header>
@@ -63,9 +66,15 @@ function App() {
 
 export default App;
 
-function List() {
+function List({ isScrollBarVisible }: { isScrollBarVisible?: boolean }) {
   return (
-    <ul className="flex gap-4 px-4 py-8 overflow-x-auto h-52 sm:gap-8 sm:px-8 md:px-12 md:gap-12">
+    <ul
+      className={classNames(
+        "flex gap-4 px-4 py-8 overflow-x-auto sm:gap-8 sm:px-8 md:px-12 md:gap-12",
+        isScrollBarVisible && "h-56",
+        !isScrollBarVisible && "h-52"
+      )}
+    >
       {images.map((image) => {
         return <ImageCard {...image} />;
       })}
