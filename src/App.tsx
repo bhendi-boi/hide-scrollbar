@@ -48,7 +48,7 @@ function App() {
         <p className="text-gray-200">
           You can grab the source code on{" "}
           <a
-            href="https://https://github.com/bhendi-boi/hide-scrollbar"
+            href="https://github.com/bhendi-boi/hide-scrollbar"
             target="_blank"
             className="text-blue-400 cursor-pointer"
           >
